@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
@@ -15,33 +18,35 @@
         <h1>Calculator</h1>
     </div>
     <div id="calculator-container">
-        <div id="display">
-            <div id="display-up">0</div>
-        </div>
-        <div id="board">
+        <div id="full-board">
             <div>
-                <button class="number" value="1">1</button>
-                <button class="number" value="2">2</button>
-                <button class="number" value="3">3</button>
-                <button class="operators" value="+">+</button>
+                <div id="display-up">0</div>
             </div>
-            <div>
-                <button class="number" value="4">4</button>
-                <button class="number" value="5">5</button>
-                <button class="number" value="6">6</button>
-                <button class="operators" value="-">-</button>
-            </div>
-            <div>
-                <button class="number" value="7">7</button>
-                <button class="number" value="8">8</button>
-                <button class="number" value="9">9</button>
-                <button class="operators" value="/">/</button>
-            </div>
-            <div>
-                <button class="no-operators" id="clear" value="AC" onclick="clear()">AC</button>
-                <button class="number" value="0">0</button>
-                <button class="no-operators" id="equal" value="=">=</button>
-                <button class="operators" value="*">*</button>
+            <div id="down-board">
+                <div class="board">
+                    <button class="number" value="1">1</button>
+                    <button class="number" value="2">2</button>
+                    <button class="number" value="3">3</button>
+                    <button class="operators" value="+">+</button>
+                </div>
+                <div class="board">
+                    <button class="number" value="4">4</button>
+                    <button class="number" value="5">5</button>
+                    <button class="number" value="6">6</button>
+                    <button class="operators" value="-">-</button>
+                </div>
+                <div class="board">
+                    <button class="number" value="7">7</button>
+                    <button class="number" value="8">8</button>
+                    <button class="number" value="9">9</button>
+                    <button class="operators" value="/">/</button>
+                </div>
+                <div class="board">
+                    <button class="no-operators" id="clear" value="AC" onclick="clear()">AC</button>
+                    <button class="number" value="0">0</button>
+                    <button class="no-operators" id="equal" value="=">=</button>
+                    <button class="operators" value="*">*</button>
+                </div>
             </div>
         </div>
 

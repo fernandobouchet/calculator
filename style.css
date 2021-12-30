@@ -1,12 +1,29 @@
 body {
-  background-color: wheat;
+  font-family: "Major Mono Display", monospace;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: whitesmoke;
   text-align: center;
+  align-items: center;
+}
+h1 {
+  margin-bottom: 100px;
+}
+#calculator-container {
+  width: 310px;
+  height: 450px;
+  background-color: #010409;
+  border-radius: 5%;
+  border-style: solid;
 }
 
-#display {
-  background-color: gray;
-  color: white;
-  font-size: 30px;
+#display-up {
+  background-color: #0d1118;
+  font-size: 40px;
+  height: 60px;
+  margin-top: 50px;
+  border-style: solid;
 }
 
 .number,
@@ -14,6 +31,24 @@ body {
 .no-operators {
   border-radius: 50px;
   border-style: solid;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  background-color: #161b22;
+  color: white;
+  transition: 0.1s linear;
+}
+
+.number:hover,
+.operators:hover,
+.no-operators:hover {
+  background-color: #30363d;
+  transform: scale(1.1);
+}
+
+.board {
+  margin-top: 5px;
+}
+
+#down-board {
+  margin-top: 50px;
 }
