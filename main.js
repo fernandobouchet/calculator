@@ -38,7 +38,11 @@ function clearDisplay() {
 }
 
 function addNumber(number) {
-  actualOperator = actualOperator.toString() + number.toString();
+  if (actualOperator !== 0) {
+    actualOperator = actualOperator.toString() + number.toString();
+  } else {
+    actualOperator = number.toString();
+  }
   updateDisplay();
 }
 
@@ -57,7 +61,7 @@ function add(firstNumber, secondNumber) {
 }
 
 function subtract(firstNumber, secondNumber) {
-  return firstNumber - secondNumber;
+  return secondNumber - firstNumber;
 }
 
 function multiply(firstNumber, secondNumber) {
@@ -65,7 +69,7 @@ function multiply(firstNumber, secondNumber) {
 }
 
 function divide(firstNumber, secondNumber) {
-  return firstNumber / secondNumber;
+  return secondNumber / firstNumber;
 }
 
 function calculate() {
@@ -92,7 +96,7 @@ function updateDisplay() {
 
 function clear() {
   actualOperator = 0;
-  previousOperator = 0;
+  previousOperator = "";
   operation = undefined;
 }
 
